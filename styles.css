@@ -1,0 +1,1446 @@
+@font-face {
+    font-family: 'TT Commons Trial';
+    src: url('FONTS/TT Commons-Trial/TT Commons-Trial-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Soviet Font';
+    src: url('FONTS/Soviet Font.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+
+    width: 100%;
+    height: 100%;
+    scroll-snap-type: y mandatory; /* Вертикальное примагничивание */
+    overflow-x: hidden;
+
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+
+}
+
+.screen {
+    scroll-snap-align: start;
+    position: relative; /* Убедитесь, что контейнер `.screen` имеет relative позиционирование */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#screen1 {
+    width: 100%;
+    height: 100%;
+    background: url('img/main.svg') no-repeat center center; /* Устанавливаем фоновую картинку */
+    background-size: cover; /* Растягиваем изображение по размеру контейнера */
+    z-index: 2;
+}
+
+#screen2 {
+    width: 100%;
+    height: 100%;
+    background-color: #FC0000;
+}
+
+#screen3 {
+    width: 100%;
+    height: 100%;
+    background-color: #FC0000;
+}
+
+
+#screen3 img {
+    /* Фото */
+    
+        position: absolute;
+        width: 438px;
+        height: 584px;
+        left: 464px;
+        top: 108px;
+        z-index: 2;
+    }
+
+#screen4 {
+    width: 100%;
+    height: 100%;
+    background-color: #F1E7D4;
+    z-index: 1;
+    
+}
+
+.header {
+    position: absolute;
+    width: 1366px;
+    height: 86px;
+    left: 0px;
+    top: 0px;
+    background-color: transparent;
+    color: black;
+    z-index: 10000;
+}
+
+
+.header-white {
+    position: fixed;
+    width: 1366px;
+    height: 86px;
+    left: 0%;
+    top: 0px;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    z-index: 1;
+}
+
+.logo {
+    /* Логотип */
+
+position: absolute;
+left: 4.39%;
+right: 81.66%;
+top: 23.26%;
+bottom: 23.26%;
+
+}
+
+.logo-white {
+    /* Логотип */
+
+    position: absolute;
+    left: 4.39%;
+    right: 81.66%;
+    top: 23.26%;
+    bottom: 23.26%;
+
+}
+
+
+/* Контейнер кнопки */
+.order-container {
+    position: absolute;
+    width: 205px;
+    height: 50px;
+    left: 60px;
+    top: 567px;
+
+    border-radius: 2px; /* Закругленные углы */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; /* Изменяет курсор на указатель при наведении */
+    overflow: hidden; /* Убедитесь, что изображение не вылезает за пределы контейнера */
+}
+
+/* Изображение по умолчанию */
+.order {
+    display: block; /* Отображается по умолчанию */
+}
+
+/* Изображение при наведении */
+.order-container:hover .order {
+    display: none; /* Скрыть изображение по умолчанию при наведении */
+}
+
+.order-container:hover .order-hover {
+    display: block; /* Показать изображение при наведении */
+}
+
+/* Изображение при нажатии */
+.order-container:active .order-hover {
+    display: none; /* Скрыть изображение при нажатии */
+}
+
+.order-container:active .order-push {
+    display: block; /* Показать изображение при нажатии */
+}
+
+/* Неактивное состояние изображений */
+.order-hover, .order-push {
+    display: none;
+}
+
+
+
+.menu {
+    /* Пункты */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 40px;
+
+position: absolute;
+left: 71.45%;
+right: 4.39%;
+top: 38.37%;
+bottom: 34.88%;
+background-color: transparent;
+color: #192632;
+}
+
+.menu-white {
+    /* Пункты */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 40px;
+
+position: absolute;
+left: 71.45%;
+right: 4.39%;
+top: 38.37%;
+bottom: 34.88%;
+
+font-family: 'TT Commons Trial';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 23px;
+
+background-color: transparent;
+color: rgb(255, 255, 255);
+}
+
+.advantages {
+/* Преимущества */
+
+width: 123px;
+height: 23px;
+
+/* 1366/Body */
+font-family: 'TT Commons Trial';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 23px;
+/* identical to box height */
+
+/* Черный */
+color: #192632;
+text-decoration: none;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+cursor: pointer;
+
+}
+
+.advantages:hover {
+    /* Преимущества */
+    
+    width: 123px;
+    height: 23px;
+    
+    /* 1366/Body */
+    font-family: 'TT Commons Trial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    /* identical to box height */
+    
+    /* Черный */
+    color: #ffffff;
+    text-decoration: none;
+    
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    cursor: pointer;
+    
+    }
+
+.advantages:hover::after {
+    content: ''; /* Необходимо для отображения псевдоэлемента */
+    position: absolute;
+    width: 153px;
+    height: 86px;
+    left: 18%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* Смещение на 50% от ширины и высоты, чтобы центрировать */
+    background: #FC0000; /* Красный фон */
+    z-index: -1; /* Убедитесь, что прямоугольник находится под текстом, если это необходимо */
+    
+    /* Опционально: добавляем плавный переход для появления/исчезновения */
+    transition: opacity 0.3s ease;
+    opacity: 1; /* Убедитесь, что прямоугольник виден при наведении */
+    cursor: pointer;
+}
+
+/* Опционально: скрываем прямоугольник по умолчанию */
+.advantages::after {
+    opacity: 0;
+}
+
+.advantages-white {
+/* Преимущества */
+
+width: 123px;
+height: 23px;
+
+/* 1366/Body */
+font-family: 'TT Commons Trial';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 23px;
+/* identical to box height */
+
+/* Черный */
+color: #ffffff;
+text-decoration: none;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+
+.advantages-white:hover {
+    /* Преимущества */
+    
+    width: 123px;
+    height: 23px;
+    
+    /* 1366/Body */
+    font-family: 'TT Commons Trial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    /* identical to box height */
+    
+    /* Черный */
+    color: #FC0000;
+    text-decoration: none;
+    
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    
+    }
+    .advantages-white:hover::after {
+        content: ''; /* Необходимо для отображения псевдоэлемента */
+        position: absolute;
+        width: 153px;
+        height: 86px;
+        left: 18%;
+        top: 50%;
+        transform: translate(-50%, -50%); /* Смещение на 50% от ширины и высоты, чтобы центрировать */
+        background:  #ffffff; /* Красный фон */
+        z-index: -1; /* Убедитесь, что прямоугольник находится под текстом, если это необходимо */
+        
+        /* Опционально: добавляем плавный переход для появления/исчезновения */
+        transition: opacity 0.3s ease;
+        opacity: 1; /* Убедитесь, что прямоугольник виден при наведении */
+        cursor: pointer;
+    }
+
+.video {
+    /* Видео */
+
+width: 51px;
+height: 23px;
+
+/* 1366/Body */
+font-family: 'TT Commons Trial';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 23px;
+/* identical to box height */
+
+/* Черный */
+color: #192632;
+text-decoration: none;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+cursor: pointer;
+
+}
+
+.video:hover {
+    /* Видео */
+
+width: 51px;
+height: 23px;
+
+/* 1366/Body */
+font-family: 'TT Commons Trial';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 23px;
+/* identical to box height */
+
+/* Черный */
+color: #ffffff;
+text-decoration: none;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+cursor: pointer;
+
+}
+
+.video:hover::after {
+    content: ''; /* Необходимо для отображения псевдоэлемента */
+    position: absolute;
+    width: 100px;
+    height: 86px;
+    left: 57%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* Смещение на 50% от ширины и высоты, чтобы центрировать */
+    background: #FC0000; /* Красный фон */
+    z-index: -1; /* Убедитесь, что прямоугольник находится под текстом, если это необходимо */
+    
+    /* Опционально: добавляем плавный переход для появления/исчезновения */
+    transition: opacity 0.3s ease;
+    opacity: 1; /* Убедитесь, что прямоугольник виден при наведении */
+    cursor: pointer;
+}
+
+/* Опционально: скрываем прямоугольник по умолчанию */
+.video::after {
+    opacity: 0;
+
+}
+
+.video-white {
+    /* Видео */
+
+width: 51px;
+height: 23px;
+
+/* 1366/Body */
+font-family: 'TT Commons Trial';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 23px;
+/* identical to box height */
+
+/* Черный */
+color: #ffffff;
+text-decoration: none;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+}
+
+.video-white:hover {
+    /* Преимущества */
+    
+    width: 51px;
+    height: 23px;
+    
+    /* 1366/Body */
+    font-family: 'TT Commons Trial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    /* identical to box height */
+    
+    /* Черный */
+    color: #FC0000;
+    text-decoration: none;
+    
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    
+    }
+
+    .video-white:hover::after {
+        content: ''; /* Необходимо для отображения псевдоэлемента */
+        position: absolute;
+        width: 100px;
+        height: 86px;
+        left: 57%;
+        top: 50%;
+        transform: translate(-50%, -50%); /* Смещение на 50% от ширины и высоты, чтобы центрировать */
+        background:  #ffffff; /* Красный фон */
+        z-index: -1; /* Убедитесь, что прямоугольник находится под текстом, если это необходимо */
+        
+        /* Опционально: добавляем плавный переход для появления/исчезновения */
+        transition: opacity 0.3s ease;
+        opacity: 1; /* Убедитесь, что прямоугольник виден при наведении */
+        cursor: pointer;
+    }
+
+.contacts {
+    /* Контакты */
+
+width: 76px;
+height: 23px;
+
+/* 1366/Body */
+font-family: 'TT Commons Trial';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 23px;
+/* identical to box height */
+
+/* Черный */
+color: #192632;
+text-decoration: none;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+}
+
+.contacts:hover {
+    /* Контакты */
+
+width: 76px;
+height: 23px;
+
+/* 1366/Body */
+font-family: 'TT Commons Trial';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 23px;
+/* identical to box height */
+
+/* Черный */
+color: #ffffff;
+text-decoration: none;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+}
+
+.contacts:hover::after {
+    content: ''; /* Необходимо для отображения псевдоэлемента */
+    position: absolute;
+    width: 100px;
+    height: 86px;
+    left: 88%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* Смещение на 50% от ширины и высоты, чтобы центрировать */
+    background: #FC0000; /* Красный фон */
+    z-index: -1; /* Убедитесь, что прямоугольник находится под текстом, если это необходимо */
+    
+    /* Опционально: добавляем плавный переход для появления/исчезновения */
+    transition: opacity 0.3s ease;
+    opacity: 1; /* Убедитесь, что прямоугольник виден при наведении */
+    cursor: pointer;
+}
+
+.contacts-white {
+    /* Контакты */
+
+width: 76px;
+height: 23px;
+
+/* 1366/Body */
+font-family: 'TT Commons Trial';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 23px;
+/* identical to box height */
+
+/* Черный */
+color: #ffffff;
+text-decoration: none;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+}
+
+.contacts-white:hover {
+    /* Контакты */
+
+width: 76px;
+height: 23px;
+
+/* 1366/Body */
+font-family: 'TT Commons Trial';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 23px;
+/* identical to box height */
+
+/* Черный */
+color: #FC0000;
+text-decoration: none;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+}
+
+.contacts-white:hover::after {
+    content: ''; /* Необходимо для отображения псевдоэлемента */
+    position: absolute;
+    width: 100px;
+    height: 86px;
+    left: 88%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* Смещение на 50% от ширины и высоты, чтобы центрировать */
+    background:  #ffffff;/* Красный фон */
+    z-index: -1; /* Убедитесь, что прямоугольник находится под текстом, если это необходимо */
+    
+    /* Опционально: добавляем плавный переход для появления/исчезновения */
+    transition: opacity 0.3s ease;
+    opacity: 1; /* Убедитесь, что прямоугольник виден при наведении */
+    cursor: pointer;
+}
+
+/* Опционально: скрываем прямоугольник по умолчанию */
+.video::after {
+    opacity: 0;
+
+}
+
+.order-btn {
+    position: absolute;
+    width: 135.1px !important;
+    height: 135.1px !important;
+    left: 831.9px !important;
+    top: 612.9px !important;
+    object-fit: contain; /* Сохраняет пропорции изображения */
+    max-width: 100%; /* Ограничивает размер по ширине */
+    max-height: 100%; /* Ограничивает размер по высоте */
+}
+
+
+.order-btn:hover {
+    content: url('img/to-order-hover.svg');
+}
+
+.order-btn:active {
+    content: url('img/to-order-push.svg');
+}
+
+
+
+.footer {
+    position: absolute;
+    width: 100%;
+    height: 83px; /* Высота футера */
+    left: 0;
+    top: 717px; /* Позиция футера */
+    background: #192632; /* Цвет фона футера */
+    display: flex; /* Используем flexbox для выравнивания содержимого */
+    align-items: center; /* Вертикальное выравнивание по центру */
+    justify-content: space-between; /* Распределение элементов футера */
+    padding: 0 20px; /* Отступы по бокам футера */
+    margin-bottom: 0%;
+
+}
+
+/* Контейнер для содержимого футера */
+.footer-content {
+    display: flex;
+    align-items: center; /* Вертикальное выравнивание по центру */
+}
+
+/* Логотип копирайта */
+.copyright-logo {
+    position: relative;
+    width: auto; /* Автоматическая ширина, чтобы сохранить пропорции */
+    height: 24px; /* Установите нужную высоту для логотипа */
+    left: 60.03px;
+}
+
+@media (min-width: 1024px) { /* You can adjust this breakpoint to your needs */
+    .copyright-logo-mobile, .copyright-logo-mobile-hover {
+        display: none; /* Hide mobile logo */
+    }
+}
+
+.petrogradweb {
+    display: block; /* Standard display for the logo */
+
+}
+
+.petrogradweb-hover {
+    display: none; /* Hide the hover image by default */
+}
+
+.image-container:hover .petrogradweb {
+    opacity: 0; /* Hide standard logo on hover */
+}
+
+.image-container:hover .petrogradweb-hover {
+    display: block; /* Show hover logo on hover */
+    opacity: 1; /* Ensure hover logo is visible */
+    /* Сделано в PetrogradWeb */
+
+position: absolute;
+left: 83,5%;
+top: 36%;
+
+}
+
+/* Обновленный scroll-container с фиксированным позиционированием */
+.scroll-container {
+    position: fixed;
+    top: 275px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 1;
+    box-sizing: border-box; /* Включает padding и border в ширину и высоту */
+}
+
+
+
+.line-row1 {
+    display: flex; /* Горизонтальное выравнивание внутри каждой строки */
+    justify-content: center;
+    gap: 20px; /* Отступ между элементами */
+    animation: moveLeft 10s linear infinite alternate;
+}
+
+.line-row2 {
+    display: flex; /* Горизонтальное выравнивание внутри каждой строки */
+    justify-content: center;
+    gap: 20px; /* Отступ между элементами */
+    animation: moveRight 10s linear infinite alternate;
+}
+
+@keyframes moveLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-25%);
+    }
+}
+
+@keyframes moveRight {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(25%);
+    }
+}
+
+
+.line1, .line2, .line3, .line4 {
+    font-family: 'Soviet Font', sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 120px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+}
+
+.line1, .line4 {
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 2px;
+    color: transparent;
+}
+
+.line2, .line3 {
+    color: #F1F1F1;
+}
+
+.video-wrapper {
+    position: absolute;
+    width: 438px;
+    height: 584px;
+    left: 464px;
+    top: 108px;
+    overflow: hidden;
+    z-index: 2;
+
+}
+
+.video-wrapper video {
+    width: 100%; /* Видео будет занимать всю ширину контейнера */
+    height: 100%; /* Видео будет занимать всю высоту контейнера */
+    object-fit: cover; /* Масштабирование видео с сохранением пропорций */
+}
+
+.application {
+    position: absolute;
+    white-space: nowrap;
+    width: 100%;
+    height: 150px;
+    left: 50%;
+    top: 183px;
+    position: absolute;
+    width: 725px;
+    height: 150px;
+    left: 321px;
+    top: 183px;
+
+    font-family: 'soviet font';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 150px;
+
+    letter-spacing: 0.02em;
+
+    color: #192632;
+
+
+}
+
+.contact-form {
+    position: absolute;
+    width: 613px;
+    height: auto;
+    left: 377px;
+    top: 353px;
+
+    display: flex;
+    flex-direction: column;
+    color: #BDB199; /* Цвет текста */
+        display: flex;
+        flex-direction: column;
+
+
+}
+
+
+
+/* Стили для полей ввода */
+.contact-form input[type="text"],
+.contact-form input[type="telephone"] {
+    font-family: 'TT Commons Trial', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    box-sizing: border-box;
+    width: 100%; /* Занимает всю доступную ширину контейнера */
+    height: 60px;
+    background: #F1F1F1;
+    border: 1px solid #BDB199;
+    border-radius: 4px;
+    padding: 0 15px;
+    margin-bottom: 20px; /* Отступ между полями */
+    color: #000000; /* Цвет текста */
+    /* Ваше имя */
+
+}
+
+.contact-form input:hover[type="text"],
+.contact-form input:hover[type="telephone"] {
+    border: 1px solid #192632;
+}
+
+.play {
+    position: absolute;
+    width: 99.11px;
+    height: 99.11px;
+    left: 852.58px;
+    top: 642.58px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.play-watch {
+    position: absolute;
+    left: 834px;
+    top: 624px;
+    animation: rotateCounterClockwise 10s linear infinite;
+    z-index: 3;
+}
+
+@keyframes rotateCounterClockwise {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+.play-hover {
+    position: absolute;
+    width: 99.11px;
+    height: 99.11px;
+    left: 852.58px;
+    top: 642.58px;
+    z-index: 4;
+    display: none;
+}
+
+.play-watch-hover {
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: 834px;
+    top: 624px;
+    animation: rotateCounterClockwise 10s linear infinite;
+    z-index: 4;
+    display: none;
+}
+
+.play-push {
+    position: absolute;
+    width: 99.11px;
+    height: 99.11px;
+    left: 852.58px;
+    top: 642.58px;
+    z-index: 5; /* Новый z-index для push элемента */
+    display: none;
+}
+
+.play-watch-push {
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: 834px;
+    top: 624px;
+    animation: rotateCounterClockwise 10s linear infinite;
+    z-index: 5; /* Новый z-index для push элемента */
+    display: none;
+}
+
+/* Показ изображений при наведении */
+.play-container:hover .play {
+    display: none !important;
+}
+
+.play-container:hover .play-watch {
+    display: none !important;
+}
+
+.play-container:hover .play-hover,
+.play-container:hover .play-watch-hover {
+    display: block !important;
+}
+
+/* Показ изображений при нажатии */
+.play-container:active .play-hover,
+.play-container:active .play-watch-hover {
+    display: none !important; /* Скрыть hover элементы при нажатии */
+}
+
+.play-container:active .play-push,
+.play-container:active .play-watch-push {
+    display: block !important; /* Показать push элементы при нажатии */
+}
+
+/* Дополнительно, если вы хотите, чтобы кнопка была прижата к левому краю */
+.send-container {
+    position: relative;
+}
+
+.send,
+.send_hover,
+.send_push {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.send-container {
+    position: relative;
+}
+
+.send,
+.send_hover,
+.send_push,
+.send-mobile,
+.send_mobile_hover,
+.send_mobile_push {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Чтобы занимало всю ширину контейнера */
+    height: 100%; /* Чтобы занимало всю высоту контейнера */
+    display: none;
+}
+
+.send {
+    display: block; /* Показываем состояние по умолчанию */
+}
+
+.send-container:hover .send {
+    display: none;
+}
+
+.send-container:hover .send_hover {
+    display: block;
+}
+
+.send-container:active .send_hover {
+    display: none;
+}
+
+.send-container:active .send_push {
+    display: block;
+}
+
+.send-mobile {
+    display: none; /* По умолчанию скрыто, будет показываться на мобильных устройствах */
+}
+
+.send_mobile_hover {
+    display: none; /* По умолчанию скрыто, будет показываться на мобильных устройствах */
+}
+
+.send_mobile_push {
+    display: none; /* По умолчанию скрыто, будет показываться на мобильных устройствах */
+}
+
+
+.checkbox-container {
+    position: relative;
+    display: inline-block;
+    left: 34%;
+    top: 110%;
+}
+
+.accept-checkbox {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.checkbox-label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+
+.checkbox-label img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+
+.acception {
+    opacity: 1;
+}
+
+.acception-hover, .acception-push {
+    opacity: 0;
+}
+
+.checkbox-label:hover .acception {
+    opacity: 0;
+}
+
+.checkbox-label:hover .acception-hover {
+    opacity: 1;
+}
+
+.accept-checkbox:checked + .checkbox-label .acception-hover {
+    opacity: 0;
+}
+
+.accept-checkbox:checked + .checkbox-label .acception-push {
+    opacity: 1;
+}
+
+.accepted {
+    display: none;
+}
+
+@media (max-width: 375px) {
+    #screen1 {
+        background: url('img/main_mobile.svg') no-repeat center center;
+        background-size: cover;
+        z-index: 10;
+
+
+        width: 375px;
+        height: 812px;
+
+
+    }
+
+    .header {
+        position: absolute; /* Absolute positioning might cause overflow issues on small screens */
+        width: 100%; /* Adjust width to be responsive */
+        max-width: 375px; /* Set a maximum width to match your original design */
+        height: 61px; /* Fixed height */
+        left: 0;
+        top: 0;
+        /* Consider adding background, border, or box-shadow if needed */
+    }
+    
+    .header-white {
+        position: fixed; /* Absolute positioning might cause overflow issues on small screens */
+        width: 100%; /* Adjust width to be responsive */
+        max-width: 375px; /* Set a maximum width to match your original design */
+        height: 61px; /* Fixed height */
+        left: 0;
+        top: 0;
+        /* Consider adding background, border, or box-shadow if needed */
+    }
+
+    .logo {
+                /* Логотип */
+
+        position: absolute;
+        left: 2.67%;
+        right: 64%;
+        top: 24.59%;
+        bottom: 25.92%;
+    }
+
+    .logo-white {
+        
+    position: absolute;
+    left: 2.67%;
+    right: 64%;
+    top: 24.59%;
+    bottom: 25.92%;
+
+    }
+        .menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            background-color: #fff; /* Цвет фона меню */
+            position: absolute;
+            top: 60px; /* Расположение меню под кнопкой */
+            left: 0;
+            right: 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень для меню */
+            z-index: 1000; /* Для размещения поверх других элементов */
+        }
+    
+        .menu a {
+            padding: 15px;
+            display: block;
+            color: #333; /* Цвет текста в меню */
+            text-decoration: none;
+        }
+    
+        .menu a:hover {
+            background-color: #f1f1f1; /* Цвет фона при наведении */
+        }
+    
+        .menu-toggle {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            position: absolute;
+            top: 20px; /* Расположение кнопки в верхней части экрана */
+            right: 20px; /* Расположение кнопки справа */
+            z-index: 1001; /* Для размещения поверх других элементов */
+        }
+    
+        .menu-toggle .bar {
+            width: 30px;
+            height: 3px;
+            background-color: #333; /* Цвет линий кнопки-амбургера */
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+    
+        .menu-toggle.active .bar:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+    
+        .menu-toggle.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+    
+        .menu-toggle.active .bar:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+
+    .menu-white {
+        display: none;
+    }
+
+    .order-container {
+
+    left: 88px;
+    top: 283px;
+
+    }
+
+    .screen2 {
+        border-radius: 5px blue;
+    }
+    .video-wrapper {
+
+    position: absolute;
+    width: 330px;
+    height: 441px;
+    left: 23px;
+    top: 175px;
+
+    }
+
+    .application {
+        /* Оставить заявку */
+
+    position: absolute;
+    width: 355px;
+    height: 120px;
+    left: 10px;
+    top: 176px;
+
+    font-family: 'soviet font';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 60px;
+    /* or 150% */
+    text-align: center;
+    letter-spacing: 0.02em;
+
+    /* Черный */
+    color: #192632;
+
+    white-space: normal;
+
+
+    }
+
+    .copyright-logo {
+        display: none;
+   
+    }
+
+    .petrogradweb {
+        display: none;
+    }
+    
+/* Основные стили футера */
+.footer {
+    position: absolute; /* Позволяет дочерним элементам использовать абсолютное позиционирование относительно футера */
+}
+
+/* Стили для обычного и мобильного логотипов */
+.copyright-logo-mobile,
+.copyright-logo-mobile-hover {
+    position: absolute;
+    top: 25%;
+    left: 94px;
+}
+
+/* Скрываем hover-логотип по умолчанию */
+.copyright-logo-mobile-hover {
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Плавный переход */
+}
+
+/* Показываем hover-логотип при наведении на ссылку */
+a:hover .copyright-logo-mobile {
+    opacity: 0;
+}
+
+a:hover .copyright-logo-mobile-hover {
+    opacity: 1;
+}
+
+
+    .contact-form {
+        /* Group 41 */
+
+    position: absolute;
+    width: 355px;
+    height: 264px;
+    left: 10px;
+    top: 336px;
+    border-color: #192632;
+
+
+    }
+
+        .send {
+            display: none; /* Скрыть на мобильных устройствах */
+        }
+    
+        .send-hover,
+        .send-push {
+            display: none; /* Скрыть на мобильных устройствах */
+        }
+    
+        .send-mobile {
+            display: block; /* Показать состояние по умолчанию для мобильных устройств */
+        }
+    
+        .send-mobile:hover .send_mobile_hover {
+            display: block;
+        }
+    
+        .send-mobile:active .send_mobile_hover {
+            display: none;
+        }
+    
+        .send-mobile:active .send_mobile_push {
+            display: block;
+        }
+
+        .checkbox-container {
+            position: relative;
+        }
+        
+        .accept-checkbox {
+            display: none; /* Скрываем стандартный чекбокс */
+        }
+        
+        .checkbox-label {
+            display: inline-block;
+            cursor: pointer;
+        }
+        
+        .acception,
+        .acception-hover,
+        .acception-push {
+            display: block;
+            width: 100px; /* Установите нужные размеры */
+            height: 100px;
+        }
+        
+        .acception-hover,
+        .acception-push {
+            display: none; /* Скрыть изображения по умолчанию */
+        }
+        
+        /* Показываем изображение при наведении */
+        .checkbox-label:hover .acception-hover {
+            display: block;
+        }
+        
+        .checkbox-label:hover .acception {
+            display: none;
+        }
+        
+        /* Показываем изображение при нажатии */
+        .accept-checkbox:checked + .checkbox-label .acception-push {
+            display: block;
+        }
+        
+        .accept-checkbox:checked + .checkbox-label .acception {
+            display: none;
+        }
+        
+
+    .footer-content {
+    display: block; 
+    width: 187px;
+    height: 41px;
+    box-sizing: border-box;
+    }
+
+    .image-container {
+    width: 172px;
+    height: 16px;
+    }
+
+    #screen3 img {
+
+    width: 330px;
+    height: 441px;
+    left: 23px;
+    top: 189px;
+
+}
+#screen2 {
+    width: 375px;
+    height: 800px;
+    background-color: #FC0000;
+}
+    .order-btn {
+    width: 100.84px !important;
+    height: 100.84px!important;
+    left: 137px!important;
+    top: 580px !important;
+}
+    .play {
+/* Кнопка */
+
+position: absolute;
+width: 73.94px;
+height: 73.94px;
+left: 150.86px;
+top: 579.02px;
+    }
+    .play-watch {
+        /* Текст */
+
+position: absolute;
+width: 100.84px !important;
+height: 100.84px!important;
+left: 137px!important;
+top: 565.15px;
+}
+
+.footer {
+    /* футер */
+
+position: absolute;
+width: 375px;
+height: 71px;
+left: 0px;
+top: 741px;
+
+
+}
+
+}

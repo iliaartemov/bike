@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ВЕЛОСИПЕД СОВЕТСКИЙ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- 1 ЭКРАН -->
+        <div class="screen" id="screen1">
+
+            <div class="header" id="header">
+                <a href="index.html">
+                    <img src="img/logo.svg" alt="Логотип" class="logo" id="logo">
+                </a>
+
+                <div class="menu-toggle" id="menu-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+
+                <div class="menu">
+                    <a href="#" class="advantages">Преимущества</a>
+                    <a href="#" class="video">Видео</a>
+                    <a href="#" class="contacts">Контакты</a>
+
+                </div>
+                
+            </div>
+            
+            <a href="#screen4" id="order-button" class="order-container">
+                <img src="img/order.svg" alt="Заказать" class="order">
+                <img src="img/order-hover.svg" alt="Заказать" class="order-hover">
+                <img src="img/order-push.svg" alt="Заказать" class="order-push">
+            </a>
+
+        </div>
+
+
+        <!-- 2 ЭКРАН -->
+        <div class="screen" id="screen2">
+
+            <div class="header-white" id="header-white">
+                <a href="index.html">
+                    <img src="img/logo_white.svg" alt="Логотип Белый" class="logo" id="logo-white">
+                </a>
+
+                <div class="menu-white">
+                    <a href="#" class="advantages-white">Преимущества</a>
+                    <a href="#" class="video-white">Видео</a>
+                    <a href="#" class="contacts-white">Контакты</a>
+                </div>
+            </div>
+
+            <div class="scroll-container hidden">
+                <div class="line-row1">
+                    <span class="line1">ВЕЛОСИПЕД</span>
+                    <span class="line2">ВЕЛОСИПЕД</span>
+                    <span class="line1">ВЕЛОСИПЕД</span>
+                    <span class="line2">ВЕЛОСИПЕД</span>
+                    <span class="line1">ВЕЛОСИПЕД</span>
+                    <span class="line2">ВЕЛОСИПЕД</span>
+                    <span class="line1">ВЕЛОСИПЕД</span>
+                    <span class="line2">ВЕЛОСИПЕД</span>
+                </div>
+                <div class="line-row2">
+                    <span class="line3">ВЕЛОСИПЕД</span>
+                    <span class="line4">ВЕЛОСИПЕД</span>
+                    <span class="line3">ВЕЛОСИПЕД</span>
+                    <span class="line4">ВЕЛОСИПЕД</span>
+                    <span class="line3">ВЕЛОСИПЕД</span>
+                    <span class="line4">ВЕЛОСИПЕД</span>
+                    <span class="line3">ВЕЛОСИПЕД</span>
+                    <span class="line4">ВЕЛОСИПЕД</span>
+                </div>
+            </div>
+
+            <div class="video-wrapper">
+                <video autoplay muted loop width="438" height="584">
+                    <source src="video/Video.mp4" type="video/mp4">Ваш браузер не поддерживает видео.
+                </video>
+
+            </div>
+
+            <div class="play-container">
+                <img src="img/play.svg" class="play">
+                <img src="img/play_watch.svg" class="play-watch">
+                <img src="img/play_hover.svg" class="play-hover">
+                <img src="img/play_watch_hover.svg" class="play-watch-hover">
+                <img src="img/play_push.svg" class="play-push">
+                <img src="img/play_watch_push.svg" class="play-watch-push">
+            </div>
+            
+        </div>
+
+        <!-- 3 ЭКРАН -->
+        <div class="screen" id="screen3">
+            <div class="screen3-container">
+                <img src="img/vel.svg">
+                <img src="img/to-order.svg" class="order-btn">
+            </div>
+        </div>
+
+        <div class="screen" id="screen4">
+
+            <div class="header" id="header">
+                <a href="index.html">
+                    <img src="img/logo.svg" alt="Логотип" class="logo" id="logo">
+                </a>
+                <div class="menu">
+                    <div class="advantages">Преимущества</div>
+                    <div class="video">Видео</div>
+                    <div class="contacts">Контакты</div>
+                </div>
+            </div>
+            
+                <div class="application">Оставить заявку</div>
+                
+                <form class="contact-form">
+                    <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+                    <input type="telephone" id="telephone" name="telephone" placeholder="+7 ___-___-__-__" required>
+
+                    <div class="send-container">
+                        <div class="send">
+                            <img src="img/send.svg" alt="Отправить">
+                        </div>
+                        
+                        <div class="send_hover">
+                            <img src="img/send_hover.svg" alt="Отправить">
+                        </div>
+                        
+                        <div class="send_push">
+                            <img src="img/send_push.svg" alt="Отправить">
+                        </div>
+                    
+                        <div class="send-mobile">
+                            <img src="img/send_mobile.svg" alt="Отправить">
+                        </div>
+                    
+                        <div class="send_mobile_hover">
+                            <img src="img/send_mobile_hover.svg" alt="Отправить">
+                        </div>
+                    
+                        <div class="send_mobile_push">
+                            <img src="img/send_mobile_push.svg" alt="Отправить">
+                        </div>
+                    </div>
+                    
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="accept-checkbox" class="accept-checkbox">
+                        <label for="accept-checkbox" class="checkbox-label">
+                            <img src="img/acception.svg" alt="Акцепт" class="acception">
+                            <img src="img/acception-hover.svg" alt="Акцепт при наведении" class="acception-hover">
+                            <img src="img/acception-push.svg" alt="Акцепт при нажатии" class="acception-push">
+                        </label>
+                    </div>
+
+                    <img src="img/accepted.svg" class="accepted">
+                    
+                </form>
+
+                <footer class="footer">
+                    <img src="IMG/Копирайт.svg" alt="Copyright symbol" class="copyright-logo">
+                    <a href="https://petrogradweb.ru/"><img src="img/footer_mobile.svg" alt="Copyright symbol" class="copyright-logo-mobile"></a>
+                    <a href="https://petrogradweb.ru/"><img src="img/footer_mobile_hover.svg" alt="Copyright symbol" class="copyright-logo-mobile-hover"></a>
+                    <div class="footer-content">
+                        <a href="https://petrogradweb.ru/" aria-label="Visit Petrograd Web" class="image-container">
+                            <img src="img/petrogradweb.svg" alt="Petrograd Web logo" class="petrogradweb">
+                            <img src="img/petrogradweb_hover.svg" alt="Petrograd Web hover logo" class="petrogradweb-hover">
+                        </a>
+                    </div>
+                </footer>
+
+            </div>
+                <script src="script.js"></script>
+                </body>
+                </html>
+                
